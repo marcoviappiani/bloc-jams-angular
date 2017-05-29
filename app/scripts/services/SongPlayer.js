@@ -89,6 +89,18 @@
          SongPlayer.currentTime = null;
          
          /**
+          * @desc Current playback volume. Default is 80.
+          * @type {Number}
+          */
+         SongPlayer.volume = 80;
+         
+         /**
+          * @desc Max playback volume. Default is 100.
+          * @type {Number}
+          */
+         SongPlayer.maxVolume = 100;
+         
+         /**
         * @function play
         * @desc Sets a current song and plays that song
         * @param {Object} song
@@ -145,6 +157,17 @@
          SongPlayer.setCurrentTime = function(time) {
              if (currentBuzzObject) {
                  currentBuzzObject.setTime(time);
+             }
+         };
+         
+         /**
+          * @function setVolume
+          * @desc Set the volume of the player
+          * @param {Number} time
+          */
+         SongPlayer.setVolume = function(volume) {
+             if (currentBuzzObject) {
+                 currentBuzzObject.setVolume(volume);
              }
          };
          
