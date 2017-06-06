@@ -49,6 +49,10 @@
                  });
              });
              
+             currentBuzzObject.bind('ended', function() {
+                 SongPlayer.next();
+             });
+             
              SongPlayer.currentSong = song;
          };
          
